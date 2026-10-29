@@ -1,0 +1,20 @@
+[project]
+name = "reto05-simulador"
+version = "1.0.0"
+description = "Simulador académico de salario quincenal"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115", "uvicorn>=0.30"]
+
+[dependency-groups]
+dev = ["pytest>=8", "httpx>=0.27", "ruff>=0.11"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["backend/tests"]
+
+[tool.ruff]
+line-length = 96
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
